@@ -1,0 +1,151 @@
+.box-bg:hover h2 {
+  background-color: #87CEFA;
+  color: white;
+  font-weight: bold;
+}
+
+p::first-letter {
+  color: #87CEFA;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.tm-banner-text::first-letter {
+  margin-left: 0;
+}
+
+.tm-banner {
+  background-color: #f5f5f5;
+}
+
+.tm-banner-inner {
+  border: 1px solid rgb(187, 187, 187);
+  background-color: white;
+}
+
+.tm-main-nav, .tm-content-box {
+  box-shadow: 0px 0px 3px 3px rgb(173, 173, 173);
+}
+
+#ideas .tm-section-title {
+  color: gainsboro;
+  letter-spacing: 5px;
+} 
+
+h2+p:first-of-type {
+  font-style: italic;
+}
+
+p {
+  line-height: 30px;
+}
+
+ol a {
+  color: black;
+}
+
+ol a:visited {
+  color: black;
+  text-decoration: underline;
+}
+
+ol a:hover {
+  text-decoration: underline;
+  text-decoration-style: double;
+  color: #87CEFA;
+}
+
+.text::after {
+  content: "New";
+  color: red;
+  vertical-align: super;    
+  line-height: 0;
+  font-size: xx-small;
+  display:inline-block;
+}
+
+.blocks li {
+  padding: 1%;
+}
+
+.blocks li:nth-child(2n) {
+  background-color: #f5f5f5;
+}
+
+.box-work p::first-letter {
+  color: grey;
+}
+
+.contact-form {
+  text-align: right;
+}
+
+.contact-form button {
+  background-color: white;
+  border: 1px solid #87CEFA;
+  color: #87CEFA;
+  padding: 1.2% 4%;
+}
+
+.contact-form button:hover {
+  background-color: #87CEFA;
+  color: white;
+  border: 1px solid #87CEFA;
+}
+
+.mandatory-field:after { 
+  content:"*";
+  color: red;
+}
+
+.tm-nav-item:hover {
+  background-color: #f5f5f5;
+}
+
+.flex-2-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.flex-2-col::after {
+  position:absolute;
+  top:0;
+  left:0;
+  width: 0;
+  height: 0;
+  content:' ';
+  border-style: solid;
+  border-width: 40px 270px 0 0;
+  border-color: #87CEFA transparent transparent transparent;
+}
+
+.blocks .flex-2-col {
+  display: none;
+}
+
+@media print {
+
+  .tm-sidebar, #about, .heading, .blocks, #ideas, section[class*="tm-content-box"] {
+    display: none;
+  }
+
+  .flex-2-col::after {
+    content: none;
+  }
+
+  .flex-2-col img {
+    padding-top: 30px;
+    width: 95%;
+  }
+
+  .flex-2-col h2 {
+    color: blue;
+  }
+
+  .tm-team-description-container {
+    width: 200%;
+  }
+
+}
